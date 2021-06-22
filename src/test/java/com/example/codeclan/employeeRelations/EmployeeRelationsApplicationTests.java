@@ -18,20 +18,22 @@ public class EmployeeRelationsApplicationTests {
 	@Autowired
 	EmployeeRepository employeeRepository;
 
-	@Autowired
-	ProjectRepository projectRepository;
+//	@Autowired
+//	ProjectRepository projectRepository;
 
 	@Autowired
 	DepartmentRepository departmentRepository;
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 	@Test
-	Department sales = new Department("Sales");
-	departmentRepository.save(sales);
+	public void createEmployeeAndDepartment() {
+		Department sales = new Department("Sales");
+		departmentRepository.save(sales);
 
-	Employee employee1 = new Employee("Ron", "Laflamme", 12345, sales);
-	employeeRepository.save(employee1);
+		Employee employee1 = new Employee("Ron", "Laflamme", 12345, sales);
+		employeeRepository.save(employee1);
+	}
 }
