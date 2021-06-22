@@ -1,5 +1,6 @@
-package models;
+package com.example.codeclan.employeeRelations.models;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
@@ -17,22 +18,22 @@ public class Employee {
     @Column(name = "last name", nullable = false)
     private String last_name;
 
-    @Column(name = "employee number", nullable = false, unique = true)
+    @Column(name = "employee_number", nullable = false, unique = true)
     private int employee_number;
 
-    @Column(name = "projects")
-    private List<Project> projects;
+//    @Column(name = "projects")
+//    private List<Project> projects;
 
     @ManyToOne
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
 
 
-    public Employee(String first_name, String last_name, int employee_number, List<Project> projects, Department department) {
+    public Employee(String first_name, String last_name, int employee_number, Department department) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.employee_number = employee_number;
-        this.projects = projects;
+//        this.projects = new ArrayList<Project>();
         this.department = department;
     }
 
@@ -79,11 +80,11 @@ public class Employee {
         this.employee_number = employee_number;
     }
 
-    public List<Project> getProjects() {
-        return projects;
-    }
-
-    public void setProjects(List<Project> projects) {
-        this.projects = projects;
-    }
+//    public List<Project> getProjects() {
+//        return projects;
+//    }
+//
+//    public void setProjects(List<Project> projects) {
+//        this.projects = projects;
+//    }
 }

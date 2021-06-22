@@ -1,20 +1,19 @@
 package com.example.codeclan.employeeRelations;
 
-import models.Department;
-import models.Project;
-import models.Employee;
+import com.example.codeclan.employeeRelations.models.Department;
+import com.example.codeclan.employeeRelations.models.Employee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import repositories.DepartmentRepository;
-import repositories.EmployeeRepository;
-import repositories.ProjectRepository;
+import com.example.codeclan.employeeRelations.repositories.DepartmentRepository;
+import com.example.codeclan.employeeRelations.repositories.EmployeeRepository;
+//import com.example.codeclan.employeeRelations.repositories.ProjectRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class EmployeeRelationsApplicationTests {
+public class EmployeeRelationsApplicationTests {
 
 	@Autowired
 	EmployeeRepository employeeRepository;

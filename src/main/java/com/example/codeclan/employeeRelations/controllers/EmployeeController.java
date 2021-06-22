@@ -1,11 +1,11 @@
-package controllers;
+package com.example.codeclan.employeeRelations.controllers;
 
-import models.Employee;
+import com.example.codeclan.employeeRelations.models.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import repositories.EmployeeRepository;
+import com.example.codeclan.employeeRelations.repositories.EmployeeRepository;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package models;
+package com.example.codeclan.employeeRelations.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,13 +12,13 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "department name", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "department")
     private List<Employee> employees;
 
-    public Department(String name, List<Employee> employee) {
+    public Department(String name) {
         this.name = name;
         this.employees = new ArrayList<Employee>();
     }
